@@ -2,12 +2,12 @@
 
 ip=$(ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/')
 
-read -t 120 -p "输入链接密码(默认：test123)：" pwd
+read -t 30 -p "输入链接密码(默认：test123)：" pwd
 if [[ ! -n "$pwd" ]] ;then 
 	pwd=test123 
 fi
 
-read -t 120 -p "输入端口(默认：6433)：" port
+read -t 30 -p "输入端口(默认：6433)：" port
 if [[ ! -n "$port" ]] ;then 
 	port=6433 
 fi
